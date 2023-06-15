@@ -1,7 +1,4 @@
-<div
-  class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
-  style="width: 380px;"
->
+<div class="d-flex flex-column bg-white">
   <a
     href="javascript:void(0)"
     class="
@@ -17,14 +14,14 @@
     <span class="fs-5 fw-semibold">Post List</span>
   </a>
   <div class="list-group list-group-flush border-bottom scrollarea">
-    <ng-container *ngIf="(posts$ | async) as posts">
+    <ng-container *ngIf="posts$ | async as posts">
       <a
         href="javascript:void(0)"
         class="list-group-item list-group-item-action py-3 lh-tight"
         [class.active]="selectedPost === post.id"
         aria-current="true"
         (click)="onSelectPost(post.id)"
-        *ngFor="let post of posts.slice(0,5)"
+        *ngFor="let post of posts.slice(0, 5)"
       >
         <div class="d-flex w-100 align-items-center justify-content-between">
           <strong class="mb-1">

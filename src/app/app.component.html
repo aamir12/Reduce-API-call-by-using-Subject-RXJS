@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-lg-4 col-sm-12">
       <app-post-list (postChange)="selectedId.next($event.id)"></app-post-list>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-lg-8 col-sm-12">
       <div class="px-3 py-5">
         <ng-container *ngIf="post$ | async as post; else loadingOrError">
           <h2>Post Detail</h2>
